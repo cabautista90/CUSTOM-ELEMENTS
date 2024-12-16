@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Aplicación Web</title>
+</head>
+<body>
+  <header-component></header-component>
+  <menu-component></menu-component>
+  <main-component id="main-content">
+    <social-profile-component id="profile-page"></social-profile-component>
+    <custom-table-component id="table-page"></custom-table-component>
+    <gallery-component id="gallery-page"></gallery-component>
+  </main-component>
+  <footer-component></footer-component>
+
+  <script src="components/header.js"></script>
+  <script src="components/footer.js"></script>
+  <script src="components/main.js"></script>
+  <script src="components/menu.js"></script>
+  <script src="components/social-profile.js"></script>
+  <script src="components/custom-table.js"></script>
+  <script src="components/gallery.js"></script>
+
+  <script>
+    window.addEventListener('hashchange', () => {
+      const pages = {
+        '#home': null,
+        '#profile': document.querySelector('#profile-page'),
+        '#gallery': document.querySelector('#gallery-page'),
+        '#table': document.querySelector('#table-page')
+      };
+
+      const mainContent = document.querySelector('#main-content');
+      mainContent.innerHTML = '';  // Clear current content
+
+      const page = pages[location.hash];
+      if (page) {
+        mainContent.appendChild(page);
+      }
+    });
+
+    window.dispatchEvent(new HashChangeEvent('hashchange'));
+  </script>
+</body>
+</html>
