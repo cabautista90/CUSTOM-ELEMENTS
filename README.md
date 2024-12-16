@@ -10,17 +10,29 @@ Este proyecto implementa Custom Elements con Shadow DOM,Templates,Slots. A conti
 La estructura de archivos del proyecto es la siguiente:
 
 /components /
+
   custom-table.js 
+  
   footer.js 
+  
   gallery.js 
+  
   header.js 
+  
   main.js 
+  
   menu.js 
+  
   social-profile.js 
-/data 
+  
+/data /
+
   user.json  
+  
 index.html 
+
 styles.css
+
 
 # Componentes
 
