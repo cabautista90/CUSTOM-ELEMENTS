@@ -9,13 +9,25 @@ Este proyecto implementa Custom Elements con Shadow DOM,Templates,Slots. A conti
 
 La estructura de archivos del proyecto es la siguiente:
 
-/components /custo table.js footer.js gallery.js header.js main.js menu.js social-profile.js /data user.json  index.html styles.css
+/components /
+  custom-table.js 
+  footer.js 
+  gallery.js 
+  header.js 
+  main.js 
+  menu.js 
+  social-profile.js 
+/data 
+  user.json  
+index.html 
+styles.css
 
 # Componentes
 
 Cada componentes está implementado como un Custom Element con Shadow DOM que encapsula su estructura y estilo
 
 # 1.CustomHeader (header.js)
+
 es un encabezado de la página que muestra un título que utiliza Shadow DOM para encapsular su estructura y sus estilos.
 Muestra el nombre o título de la aplicación.
 
